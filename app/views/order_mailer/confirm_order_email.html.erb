@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Bonjour <%= @order.cart.user.first_name %> <%= @order.cart.user.last_name %> votre commande a bien été prise en compte !</h1>
+    <p>
+      Nous vous remercions de votre commande.
+    </p>
+    
+    <!-- Affichage des images de chats commandées par l'utilisateur -->
+    <p>Voici les articles que vous avez commandés : </p>
+    <% @items_array.each do |item| %>
+      <p><%= item.title %></p>
+
+    <% end %>
+
+    <p>
+      Pour accéder à ton espace client, connecte-toi via : <%= @url %>.
+    </p>
+    <p> À très vite sur monsite.fr !
+  </body>
+</html>
